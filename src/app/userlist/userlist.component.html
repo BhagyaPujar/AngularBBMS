@@ -1,0 +1,20 @@
+<p>User list works!</p>
+
+<ul *ngFor="let usr of users">
+  <li>
+    <a
+      routerLink="/editUsr/{{ usr.usr_id }}"
+      routerLinkActive="active"
+      class="list-group-item list-group-item-action list-group-item-primary"
+    >
+      <span
+        >{{ usr.usr_id }}--{{ usr.usr_name }}--{{ usr.usr_email }}--
+        {{ usr.usr_password }}--{{ usr.usr_address}}--
+        {{ usr.usr_gender }}--  {{ usr.usr_mobile }} </span
+      >
+    </a>
+    <button (click)="onDelete(usr)">Delete</button>
+  </li>
+</ul>
+
+

@@ -1,0 +1,180 @@
+<body>
+  <section class="vh-100 gradient-custom">
+     
+      <div class="container py-5 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-12 col-lg-9 col-xl-7">
+            <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="mb-4 pb-2 pb-md-0 mb-md-5">Donor Registration</h2>
+                
+                <form>
+                  
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+    
+                      <div class="form-outline">
+                          <label class="form-label" for="firstName">Enter Name</label>
+                        <input type="text" name="txtname" id="firstName" class="form-control form-control-lg" [(ngModel)]="donorDetails.dnr_name"/>
+                        
+                      </div>
+    
+                    </div>
+                    
+                    <div class="col-md-6 mb-4 pb-2">
+    
+                      <div class="form-outline">
+                          <label class="form-label" for="emailAddress">Email</label>
+                        <input type="email"  name="txtemail" id="emailAddress" class="form-control form-control-lg"  [(ngModel)]="donorDetails.dnr_email" />
+                        
+                      </div>
+    
+                    </div>
+  
+                  
+                      
+                        
+  
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-md-6 mb-4 d-flex align-items-center">
+  
+                      <div class="form-outline mb-4">
+                          <label class="form-label" for="form3Example8">Address</label>
+                          <input type="text" name="txtaddress" id="form3Example8" class="form-control form-control-lg" [(ngModel)]="donorDetails.dnr_address"/>
+                         
+                        </div>
+    
+                    </div>
+                    <div class="col-md-6 mb-4">
+    
+                      <h6 class="mb-2 pb-1">Gender: </h6>
+    
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="femaleGender"
+                          [(ngModel)]="donorDetails.dnr_gender"
+                          value="Female"
+                          checked
+                        />
+                        <label class="form-check-label" for="femaleGender">Female</label>
+                      </div>
+    
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="maleGender"
+                          [(ngModel)]="donorDetails.dnr_gender"
+                          value="Male"
+                        />
+                        <label class="form-check-label" for="maleGender">Male</label>
+                      </div>
+    
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    
+                    <div class="col-md-6 mb-4 pb-2">
+    
+                      <div class="form-outline">
+                          <label class="form-label" for="phoneNumber">Phone Number</label>
+                        <input type="tel" name="txtmobile" id="phoneNumber" class="form-control form-control-lg"  [(ngModel)]="donorDetails.dnr_mobile" />
+                       
+                      </div>
+    
+                    </div>
+  
+  
+  
+                    <div class="col-md-6 mb-4 pb-2">
+    
+                      <div class="form-outline">
+                          <label class="form-label" for="password">Password</label>
+                        <input type="password" name="txtpassword" id="password" class="form-control form-control-lg"  [(ngModel)]="donorDetails.dnr_password"/>
+                       
+                      </div>
+    
+                    </div>
+  
+  
+                  </div>
+  
+                  <div class="text-center">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    routerLinkActive="active"
+                    >Choose BloodGroup from below list</a
+                  >
+                  <select class="form-select" aria-label="Default select example" 
+                  style="width:300px;">
+                    <option selected>Open this select menu</option>
+                    <option>A+</option>
+                     <option>A-</option>
+                     <option>AB+</option>
+                     <option>AB-</option>
+                     <option>B+</option>
+                    <option>B-</option>
+                    <option>O+</option>
+                    <option>O-</option>
+               </select>
+                </li>
+  
+              </ul>
+            
+    
+            
+          </div>
+        </div>
+      </nav>
+      <router-outlet></router-outlet>
+  
+  
+                  <div class="form-check d-flex justify-content-center mb-5">
+                      <input
+                        class="form-check-input me-2"
+                        type="checkbox"
+                        value=""
+                        id="form2Example3cg"
+                      />
+                      <label class="form-check-label" for="form2Example3g">
+                        I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                      </label>
+                    </div>
+  
+                    <div class="form-group" class="d-flex justify-content-center">
+              
+                      <button (click)="addDonor()" class="btn btn-primary">
+                        Register
+                      </button>
+                    </div>
+    
+                   
+    
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <div style="height: 300px;"></div>
+  </body>
